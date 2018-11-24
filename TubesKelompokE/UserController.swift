@@ -7,15 +7,27 @@
 //
 
 import UIKit
-
-class UserController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-
+import Alamofire
+class UserController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//UNTUK DI UI PROFIL USER
     @IBOutlet weak var userImage: UIImageView!
+    
     @IBOutlet weak var EditProfile: UIButton!
+    
+    
+//ATRIBUT DI UI EDIT PROFIL USER
+    @IBOutlet weak var fullnameEditor: UITextField!
+    @IBOutlet weak var passwordEditor: UITextField!
+    @IBOutlet weak var phoneEditor: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        EditProfile.layer.cornerRadius = EditProfile.frame.height/2
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    @IBAction func ediProfileAction(_ sender: Any) {
+        performSegue(withIdentifier: "editProfile", sender: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -34,8 +46,6 @@ class UserController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         picker.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func EditProfilebtn(_ sender: Any) {
-    }
     
     @IBAction func EditPicturebtn(_ sender: Any) {
         let alertController = UIAlertController(title: nil, message: "Load Your Picture", preferredStyle: .actionSheet)
@@ -77,14 +87,7 @@ class UserController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         
         present(alertController, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }

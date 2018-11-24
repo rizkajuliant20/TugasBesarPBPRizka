@@ -7,19 +7,27 @@
 //
 
 import UIKit
-
-class MasterViewController: UITableViewController, UISearchBarDelegate {
+import Alamofire
+class MasterViewController: UITableViewController, UISearchBarDelegate{
+    @IBOutlet weak var Judul: UILabel!
+    @IBOutlet weak var Isi: UITextView!
+    @IBOutlet weak var UpdateNote: UIButton!
+    
+    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/note"
+    
+    var titleArray = [AnyObject]()
+    
+    
+    
 
     
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
-    */
+
+    
+    
+    
 
 }

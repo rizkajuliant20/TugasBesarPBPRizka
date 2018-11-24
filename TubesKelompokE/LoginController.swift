@@ -25,39 +25,46 @@ class LoginController: UIViewController {
     }
     
     @IBAction func Login(_ sender: Any) {
-        performSegue(withIdentifier: "login", sender: (Any).self)
-        getJson(urlString: URL_JSON + UsernameLogin.text! + PasswordLogin.text!)
+        
+        let USERNAME = self.UsernameLogin.text!
+        let PASSWORD = self.PasswordLogin.text!
+        let parameter: [String: Any] = ["name": USERNAME, "password": PASSWORD]
+        
+        if (USERNAME=="admin" || PASSWORD=="admin"){
+            self.performSegue(withIdentifier: "admin", sender: nil)
+        }else{
+            if (USERNAME.isEmpty || PASSWORD.isEmpty){
+                let AlertControl = UIAlertController(title: "Failed to Login", message: "Username and Password must not be empty...", preferredStyle: UIAlertController.Style.alert)
+                AlertControl.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+                self.present(AlertControl, animated: true, completion: nil)
+            }
+            
+//            Alamofire.request(URL_JSON, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: nil).responseJSON{
+//                response in
+//                print(response)
+//
+//                if let result = response.result.value {
+//                    let jsonData = result as! NSDictionary
+//
+//                    if((jsonData.value(forKey: "response") as! Bool)){
+//                        let username = jsonData.value(forKey: "name") as? String
+//                        let password = jsonData.value(forKey: "password") as? String
+//
+//                        UserDefaults.standard.set(username, forKey: "username")
+            
+                        self.performSegue(withIdentifier: "login", sender: nil)
+//                    }
+//                }else{
+//                    let AlertController = UIAlertController(title: "Failed to Login", message: "Check Again Your Username and Password", preferredStyle: UIAlertController.Style.alert)
+//                    AlertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+//
+//                    self.present(AlertController, animated: true, completion: nil)
+//                }
+//            }
+        }
+        
+        
         
     }
     
-    fileprivate func getJson(urlString: String)
-    {
-        let url = URL(string: urlString)
-        URLSession.shared.dataTask(with: url!){
-            (data, response, err) in
-            if err != nil{
-                print("error", err ?? "")
-            }else{
-                if let useable = data{
-                    do {
-                        let jsonObject = try JSONSerialization.jsonObject(with: useable, options: .mutableContainers) as AnyObject
-                        
-                        print(jsonObject)
-                        
-                        if let mhs = jsonObject as? [String: AnyObject]{
-                            self.user = User(json: mhs as! [String: AnyObject])
-                            self.user?.printData()
-                        }else{
-                            print("nil")
-                        }
-                    }
-                    catch{
-                        print("error catch")
-                    }
-                }
-            }
-        }.resume()
-    }
-    
-
 }

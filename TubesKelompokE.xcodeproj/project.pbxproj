@@ -20,6 +20,7 @@
 		A8CD275621A14157006F9E99 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD275521A14157006F9E99 /* RegisterController.swift */; };
 		A8E5DD7021A2BAFC00F2F3A6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5DD6F21A2BAFC00F2F3A6 /* MasterViewController.swift */; };
 		A8E5DD7221A2BB0A00F2F3A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5DD7121A2BB0A00F2F3A6 /* DetailViewController.swift */; };
+		A8F7A30B21A9CC730064FCDE /* NewNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7A30A21A9CC730064FCDE /* NewNoteController.swift */; };
 		C1F6FB8A5A82801FCCFA81AD /* Pods_TubesKelompokE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6951F2ADF4B2E1078E0AB04 /* Pods_TubesKelompokE.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		A8CD275521A14157006F9E99 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		A8E5DD6F21A2BAFC00F2F3A6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		A8E5DD7121A2BB0A00F2F3A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A8F7A30A21A9CC730064FCDE /* NewNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteController.swift; sourceTree = "<group>"; };
 		C6951F2ADF4B2E1078E0AB04 /* Pods_TubesKelompokE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubesKelompokE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D6712033A3F424462096AE /* Pods-TubesKelompokE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubesKelompokE.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubesKelompokE/Pods-TubesKelompokE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				A8E5DD7121A2BB0A00F2F3A6 /* DetailViewController.swift */,
 				A851A19C21A6EFA0001ECC0A /* UserController.swift */,
 				A851A19E21A6FBA3001ECC0A /* AdminController.swift */,
+				A8F7A30A21A9CC730064FCDE /* NewNoteController.swift */,
 			);
 			path = TubesKelompokE;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				A803278E21A1C187002E0295 /* User.swift in Sources */,
 				A851A19F21A6FBA3001ECC0A /* AdminController.swift in Sources */,
 				A8CD274221A13FD4006F9E99 /* AppDelegate.swift in Sources */,
+				A8F7A30B21A9CC730064FCDE /* NewNoteController.swift in Sources */,
 				A8E5DD7221A2BB0A00F2F3A6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
