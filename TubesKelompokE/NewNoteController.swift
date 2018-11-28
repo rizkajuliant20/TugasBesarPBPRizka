@@ -8,12 +8,13 @@
 
 import UIKit
 import Alamofire
+
 class NewNoteController: UIViewController {
 
     @IBOutlet weak var JudulBaru: UITextField!
     @IBOutlet weak var IsiBaru: UITextView!
     
-    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/note"
+    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/notes"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class NewNoteController: UIViewController {
     @IBAction func SimpanNoteBaru(_ sender: Any) {
         let JUDUL = self.JudulBaru.text!
         let ISI = self.IsiBaru.text!
-        let parameter : [String: Any] = ["title": JUDUL, "text": ISI]
+        let parameter : [String: Any] = ["notes_title": JUDUL, "notes_content": ISI, "user_id": 1]
         
         if (JUDUL.isEmpty || ISI.isEmpty){
             let AlertControl = UIAlertController(title: "Failed to Save Data", message: "Field Must Not Be Empty", preferredStyle: UIAlertController.Style.alert)

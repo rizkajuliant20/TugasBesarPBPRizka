@@ -17,7 +17,7 @@ class User: NSObject {
     var password: String!
     
     init(json: [String: Any]) {
-        self.fullname = json["nama"] as? String ?? ""
+        self.fullname = json["name"] as? String ?? ""
         self.email = json["email"] as? String ?? ""
         self.phone = json["phone"] as? String ?? ""
         self.username = json["username"] as? String ?? ""
@@ -26,7 +26,7 @@ class User: NSObject {
     
     func printData(){
         print(
-            "nama: ", self.fullname,
+            " name: ", self.fullname,
             " email : ", self.email,
             " phone : ", self.phone,
             " username : ", self.username,

@@ -9,9 +9,16 @@
 import UIKit
 import Alamofire
 class UserController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//UNTUK DI UI PROFIL USER
-    @IBOutlet weak var userImage: UIImageView!
     
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var password: UILabel!
+    
+    //UNTUK DI UI PROFIL USER
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var EditProfile: UIButton!
     
     
@@ -20,12 +27,55 @@ class UserController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var passwordEditor: UITextField!
     @IBOutlet weak var phoneEditor: UITextField!
     
+    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/user"
+    
+    var user: User? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        getJson(urlString: URL_JSON)
     }
+    
+    fileprivate func setUser() {
+        DispatchQueue.main.async(execute: {
+            self.name.text = self.user?.fullname
+            self.email.text = self.user?.email
+            self.username.text = self.user?.username
+            self.phone.text = self.user?.phone
+            self.password.text = self.user?.password
+        })
+    }
+    
+    fileprivate func getJson(urlString: String) {
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with: url!) {
+            (data, response, err) in
+            if err != nil {
+                print("error", err ?? "")
+            }
+            else {
+                if let useable = data {
+                    do {
+                        let jsonObject = try JSONSerialization.jsonObject(with: useable, options: .mutableContainers) as AnyObject
+                        print(jsonObject)
+                        
+                        if let usr = jsonObject as? [String: AnyObject] {
+                            self.user = User(json: usr as! [String: AnyObject])
+                            self.user?.printData()
+                            self.setUser()
+                        }
+                        else {
+                            print("nil")
+                        }
+                    }
+                    catch {
+                        print("error catch")
+                    }
+                }
+            }
+            }.resume()
+    }
+
     @IBAction func ediProfileAction(_ sender: Any) {
         performSegue(withIdentifier: "editProfile", sender: nil)
     }

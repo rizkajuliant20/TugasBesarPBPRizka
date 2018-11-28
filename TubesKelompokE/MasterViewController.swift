@@ -13,7 +13,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate{
     @IBOutlet weak var Isi: UITextView!
     @IBOutlet weak var UpdateNote: UIButton!
     
-    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/note"
+    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/notes"
     
     var titleArray = [AnyObject]()
     

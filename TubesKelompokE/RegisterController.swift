@@ -18,7 +18,7 @@ class RegisterController: UIViewController {
     @IBOutlet weak var ConfPass: UITextField!
     
     @IBOutlet weak var RegisterMe: UIButton!
-    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/guest"
+    let URL_JSON = "https://pbp-api.tugasbesar.com/public/api/register"
 
     
 
@@ -36,7 +36,7 @@ class RegisterController: UIViewController {
         let USERNAME = self.Username.text!
         let PASSWORD = self.Password.text!
         let CONFPASSWORD = self.ConfPass.text!
-        let parameter: [String: Any] = ["name": FULLNAME, "email": EMAIL, "username": USERNAME, "no_hp": PHONE,  "password": PASSWORD, "check": 0]
+        let parameter: [String: Any] = ["name": FULLNAME, "email": EMAIL, "username": USERNAME, "no_hp": PHONE,  "password": PASSWORD, "password_confirmation": CONFPASSWORD]
         
         if (USERNAME.isEmpty || PASSWORD.isEmpty || FULLNAME.isEmpty || EMAIL.isEmpty || PHONE.isEmpty || CONFPASSWORD.isEmpty){
             let AlertControl = UIAlertController(title: "Failed to Login", message: "Field Must Not Be Empty", preferredStyle: UIAlertController.Style.alert)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471EB40A21AE24D600EC01B4 /* GetNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EB40921AE24D600EC01B4 /* GetNoteController.swift */; };
+		471EB40C21AE269500EC01B4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EB40B21AE269500EC01B4 /* Note.swift */; };
 		A803278E21A1C187002E0295 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803278D21A1C187002E0295 /* User.swift */; };
 		A8235D3F21A71144009025C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8235D3E21A71144009025C5 /* Podfile */; };
 		A851A19D21A6EFA0001ECC0A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851A19C21A6EFA0001ECC0A /* UserController.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		367B3D38C612F8C82D7F3395 /* Pods-TubesKelompokE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubesKelompokE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubesKelompokE/Pods-TubesKelompokE.debug.xcconfig"; sourceTree = "<group>"; };
+		471EB40921AE24D600EC01B4 /* GetNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoteController.swift; sourceTree = "<group>"; };
+		471EB40B21AE269500EC01B4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A803278D21A1C187002E0295 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A8235D3E21A71144009025C5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A851A19C21A6EFA0001ECC0A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				A851A19C21A6EFA0001ECC0A /* UserController.swift */,
 				A851A19E21A6FBA3001ECC0A /* AdminController.swift */,
 				A8F7A30A21A9CC730064FCDE /* NewNoteController.swift */,
+				471EB40921AE24D600EC01B4 /* GetNoteController.swift */,
+				471EB40B21AE269500EC01B4 /* Note.swift */,
 			);
 			path = TubesKelompokE;
 			sourceTree = "<group>";
@@ -242,10 +248,12 @@
 				A8E5DD7021A2BAFC00F2F3A6 /* MasterViewController.swift in Sources */,
 				A8CD275421A14147006F9E99 /* LoginController.swift in Sources */,
 				A803278E21A1C187002E0295 /* User.swift in Sources */,
+				471EB40A21AE24D600EC01B4 /* GetNoteController.swift in Sources */,
 				A851A19F21A6FBA3001ECC0A /* AdminController.swift in Sources */,
 				A8CD274221A13FD4006F9E99 /* AppDelegate.swift in Sources */,
 				A8F7A30B21A9CC730064FCDE /* NewNoteController.swift in Sources */,
 				A8E5DD7221A2BB0A00F2F3A6 /* DetailViewController.swift in Sources */,
+				471EB40C21AE269500EC01B4 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
