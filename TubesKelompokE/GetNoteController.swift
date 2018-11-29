@@ -47,10 +47,10 @@ class GetNoteController: UITableViewController {
                         print(jsonObject)
                         
                         let notes = jsonObject as? [AnyObject]
-                        for note in notes! {
-                            let n = Note(json: note as! [String: Any])
-                            self.notes.append(n)
-                        }
+//                        for note in notes! {
+//                            let n = Note(json: note as! [String: Any])
+//                            self.notes.append(n)
+//                        }
                         
                         DispatchQueue.main.async(execute: {
                             self.tableView.reloadData()

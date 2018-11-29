@@ -39,7 +39,6 @@ class NewNoteController: UIViewController {
             switch response.result {
             case .success:
                 print(response)
-                
                 break
             case .failure(let error):
                 print(error)

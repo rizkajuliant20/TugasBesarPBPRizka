@@ -66,41 +66,4 @@ class RegisterController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-//    fileprivate func postMahasiswa(fullname: String, email: String, phone: String, username: String, password: String){
-//        let parameters: [String: Any] = ["name": fullname, "email": email, "username": username, "no_hp": phone,  "password": password, "check": 1]
-//
-//        guard let url = URL(string: URL_JSON) else{ return }
-//
-//        var request = URLRequest(url: url)
-//
-//        request.httpMethod = "POST"
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//
-//        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
-//        request.httpBody = httpBody
-//
-//        let session = URLSession.shared
-//        session.dataTask(with: request){ (data, response, err) in
-//            if let response = response{
-//                print(response)
-//            }
-//            if let data = data{
-//                do{
-//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-//                }
-//                catch{
-//                    print (error)
-//                }
-//            }
-//        }.resume()
-//    }
-    
 }
