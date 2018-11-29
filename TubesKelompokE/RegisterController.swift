@@ -39,13 +39,13 @@ class RegisterController: UIViewController {
         let parameter: [String: Any] = ["name": FULLNAME, "email": EMAIL, "username": USERNAME, "no_hp": PHONE,  "password": PASSWORD, "password_confirmation": CONFPASSWORD]
         
         if (USERNAME.isEmpty || PASSWORD.isEmpty || FULLNAME.isEmpty || EMAIL.isEmpty || PHONE.isEmpty || CONFPASSWORD.isEmpty){
-            let AlertControl = UIAlertController(title: "Failed to Login", message: "Field Must Not Be Empty", preferredStyle: UIAlertController.Style.alert)
+            let AlertControl = UIAlertController(title: "Failed to Register", message: "Field Must Not Be Empty", preferredStyle: UIAlertController.Style.alert)
             AlertControl.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
             self.present(AlertControl, animated: true, completion: nil)
         }
         
         if (PASSWORD != CONFPASSWORD){
-            let AlertControl = UIAlertController(title: "Failed to Login", message: "Password and Username Must Be Match", preferredStyle: UIAlertController.Style.alert)
+            let AlertControl = UIAlertController(title: "Failed to Register", message: "Password and Username Must Be Match", preferredStyle: UIAlertController.Style.alert)
             AlertControl.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
             self.present(AlertControl, animated: true, completion: nil)
         }
