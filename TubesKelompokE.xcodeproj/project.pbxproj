@@ -31,7 +31,7 @@
 		471EB40921AE24D600EC01B4 /* GetNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoteController.swift; sourceTree = "<group>"; };
 		471EB40B21AE269500EC01B4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A803278D21A1C187002E0295 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A8235D3E21A71144009025C5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A8235D3E21A71144009025C5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A851A19C21A6EFA0001ECC0A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		A851A19E21A6FBA3001ECC0A /* AdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
 		A8CD273E21A13FD4006F9E99 /* TubesKelompokE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubesKelompokE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,12 +201,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TubesKelompokE/Pods-TubesKelompokE-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

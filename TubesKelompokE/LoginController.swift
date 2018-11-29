@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LoginController: UIViewController {
 
@@ -46,15 +47,20 @@ class LoginController: UIViewController {
                 if let result = response.result.value {
                     let jsonData = result as! NSDictionary
                     
-//                        let post = JSON(value)
-//                        if let key = post["token"].string {
+                    let json = try! JSON(data: response.data!)
+                    if json["error"] == "invalid_credentials" {
+                        let AlertController = UIAlertController(title: "Failed to Login", message: "User tidak terdaftar", preferredStyle: UIAlertController.Style.alert)
+                        AlertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+                        
+                        self.present(AlertController, animated: true, completion: nil)
+                    }
+                    else {
                         let username = jsonData.value(forKey: "username") as? String
-//                        let password = jsonData.value(forKey: "password") as? String
-
+                        let password = jsonData.value(forKey: "password") as? String
+                        
                         UserDefaults.standard.set(username, forKey: "username")
-            
                         self.performSegue(withIdentifier: "login", sender: nil)
-                    //}
+                    }
                 }else{
                     let AlertController = UIAlertController(title: "Failed to Login", message: "Check Again Your Username and Password", preferredStyle: UIAlertController.Style.alert)
                     AlertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
@@ -63,9 +69,5 @@ class LoginController: UIViewController {
                 }
             }
         }
-        
-        
-        
     }
-    
 }

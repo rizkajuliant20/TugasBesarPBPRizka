@@ -18,6 +18,7 @@ class NewNoteController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
 
         // Do any additional setup after loading the view.
     }
@@ -25,7 +26,7 @@ class NewNoteController: UIViewController {
     @IBAction func SimpanNoteBaru(_ sender: Any) {
         let JUDUL = self.JudulBaru.text!
         let ISI = self.IsiBaru.text!
-        let parameter : [String: Any] = ["notes_title": JUDUL, "notes_content": ISI, "user_id": 1]
+        let parameter : [String: Any] = ["notes_title": JUDUL, "notes_content": ISI, "user_id": 0]
         
         if (JUDUL.isEmpty || ISI.isEmpty){
             let AlertControl = UIAlertController(title: "Failed to Save Data", message: "Field Must Not Be Empty", preferredStyle: UIAlertController.Style.alert)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ftd-At-BmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ftd-At-BmU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vso-Gh-PdW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1423" y="143"/>
+            <point key="canvasLocation" x="-1423.2" y="142.57871064467767"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="Xsj-sc-p5m">
@@ -1075,15 +1075,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cart" width="48" height="48"/>
+        <image name="cart" width="16" height="16"/>
         <image name="cute" width="1400" height="1400"/>
-        <image name="girl" width="163.11505126953125" height="163.11505126953125"/>
+        <image name="girl" width="512" height="512"/>
         <image name="homeee" width="1080" height="1920"/>
         <image name="kocheng" width="1082" height="1920"/>
         <image name="lalala" width="236" height="444"/>
         <image name="logouttt" width="16" height="16"/>
-        <image name="note" width="12.800000190734863" height="12.800000190734863"/>
-        <image name="user" width="12.800000190734863" height="12.800000190734863"/>
+        <image name="note" width="16" height="16"/>
+        <image name="user" width="16" height="16"/>
         <image name="wallp1" width="736" height="1309"/>
     </resources>
     <inferredMetricsTieBreakers>

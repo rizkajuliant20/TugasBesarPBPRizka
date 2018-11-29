@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'TubesKelompokE' do
     pod 'Alamofire', '~> 4.7'
+    pod 'SwiftyJSON'
 end
